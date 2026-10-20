@@ -1,0 +1,6 @@
+{
+  "name": "ANNUR TEA — Premium Tea Marketplace & Business Platform",
+  "description": "Luxurious multilingual tea business platform for ANNUR TEA with buyer, seller, and admin dashboards, product catalog, and multi-directional animated typography.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

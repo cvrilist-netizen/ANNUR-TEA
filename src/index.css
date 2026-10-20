@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #102C24;
+    color: #F5F0E6;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Signature Multidirectional Floating Typography Animations */
+@keyframes annurDriftRight {
+  0% {
+    transform: translate3d(-10%, 0, 0);
+  }
+  50% {
+    transform: translate3d(5%, -15px, 0);
+  }
+  100% {
+    transform: translate3d(-10%, 0, 0);
+  }
+}
+
+@keyframes annurDriftLeft {
+  0% {
+    transform: translate3d(5%, 0, 0);
+  }
+  50% {
+    transform: translate3d(-10%, 15px, 0);
+  }
+  100% {
+    transform: translate3d(5%, 0, 0);
+  }
+}
+
+@keyframes annurDriftDown {
+  0% {
+    transform: translate3d(0, -8%, 0);
+  }
+  50% {
+    transform: translate3d(-10px, 6%, 0);
+  }
+  100% {
+    transform: translate3d(0, -8%, 0);
+  }
+}
+
+@keyframes annurDriftUp {
+  0% {
+    transform: translate3d(0, 6%, 0);
+  }
+  50% {
+    transform: translate3d(10px, -8%, 0);
+  }
+  100% {
+    transform: translate3d(0, 6%, 0);
+  }
+}
+
+@keyframes botanicalFloat {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(12px, -18px) rotate(8deg);
+  }
+  66% {
+    transform: translate(-10px, 14px) rotate(-6deg);
+  }
+}
+
+.animate-annur-right {
+  animation: annurDriftRight 42s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-annur-left {
+  animation: annurDriftLeft 48s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-annur-down {
+  animation: annurDriftDown 38s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-annur-up {
+  animation: annurDriftUp 44s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-botanical-1 {
+  animation: botanicalFloat 18s ease-in-out infinite;
+}
+
+.animate-botanical-2 {
+  animation: botanicalFloat 24s ease-in-out infinite reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-annur-right,
+  .animate-annur-left,
+  .animate-annur-down,
+  .animate-annur-up,
+  .animate-botanical-1,
+  .animate-botanical-2 {
+    animation: none !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #102C24;
+}
+::-webkit-scrollbar-thumb {
+  background: #174638;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C8A96B;
+}
+
